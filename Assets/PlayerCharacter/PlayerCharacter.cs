@@ -39,5 +39,10 @@ public class PlayerCharacter : MonoBehaviour
         }
 
         transform.position += input * Time.deltaTime * movementSpeed;
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("Shoot!");
+        }
     }
 }
