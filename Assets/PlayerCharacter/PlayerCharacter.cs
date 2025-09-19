@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerCharacter : MonoBehaviour
 {
+    public float movementSpeed;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,7 +16,8 @@ public class PlayerCharacter : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             // Up: positive Y, Right: positive X, Down: negative X, Left: negative X
-            transform.position += new Vector3(1f, 0f, 0f);
+            // transform.position += new Vector3(1f, 0f, 0f);
+            transform.position += new Vector3(movementSpeed * Time.deltaTime, 0f, 0f);
         }
     }
 }
