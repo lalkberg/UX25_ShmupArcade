@@ -29,6 +29,15 @@ public class PlayerCharacter : MonoBehaviour
             input += new Vector3(-1f, 0f);
         }
 
+        if (Input.GetKey(KeyCode.W))
+        {
+            input += new Vector3(0f, 1f);
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            input += new Vector3(0f, -1f);
+        }
+
         transform.position += input * Time.deltaTime * movementSpeed;
     }
 }
