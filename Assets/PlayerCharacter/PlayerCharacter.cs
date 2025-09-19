@@ -19,5 +19,9 @@ public class PlayerCharacter : MonoBehaviour
             // transform.position += new Vector3(1f, 0f, 0f);
             transform.position += new Vector3(movementSpeed * Time.deltaTime, 0f, 0f);
         }
+        else
+        {
+            Debug.Log("I am not moving.");
+        }
     }
 }
