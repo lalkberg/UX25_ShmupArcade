@@ -24,6 +24,7 @@ public class EnemyCharacter : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("collision");
         if (collision.gameObject.TryGetComponent(out Health health))
         {
             health.Damage(1);
