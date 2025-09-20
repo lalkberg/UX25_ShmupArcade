@@ -3,7 +3,6 @@ using UnityEngine;
 public class PlayerCharacter : MonoBehaviour
 {
     public float movementSpeed;
-    public GameObject bulletPrefab;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -44,8 +43,7 @@ public class PlayerCharacter : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-                       // game object   location          rotation
-            Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            GetComponent<Shooter>().Shoot();
         }
     }
 }
