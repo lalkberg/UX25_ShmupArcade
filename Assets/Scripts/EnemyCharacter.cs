@@ -3,6 +3,7 @@ using UnityEngine;
 public class EnemyCharacter : MonoBehaviour
 {
     public float movementSpeed;
+    public bool isShooter;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,5 +15,10 @@ public class EnemyCharacter : MonoBehaviour
     {
         // move the enemy DOWN every frame regardless of input
         transform.position += Vector3.down * movementSpeed * Time.deltaTime;
+
+        if (isShooter)
+        {
+            GetComponent<Shooter>().Shoot();
+        }
     }
 }

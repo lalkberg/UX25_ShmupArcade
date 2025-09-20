@@ -17,6 +17,11 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Bullet collision!");
+        if (collision.TryGetComponent(out Health health))
+        {
+            Debug.Log("Bullet collision!");
+            health.Damage(1);
+        }
+        Destroy(gameObject);
     }
 }
