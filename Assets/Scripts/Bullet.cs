@@ -14,4 +14,9 @@ public class Bullet : MonoBehaviour
     {
         transform.position += new Vector3(0, movementSpeed, 0) * Time.deltaTime;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Bullet collision!");
+    }
 }
