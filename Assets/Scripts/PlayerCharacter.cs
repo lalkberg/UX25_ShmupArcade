@@ -46,4 +46,9 @@ public class PlayerCharacter : MonoBehaviour
             GetComponent<Shooter>().Shoot();
         }
     }
+
+    private void OnDestroy()
+    {
+        Debug.Log("Game Over!");
+    }
 }
